@@ -5,6 +5,12 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  function returnCWFunction() {
+    fetch('/helloworld')
+      .then(response => response.json())
+      .then(data => alert(data))
+  }
+
   return (
     <div className="App">
       <div>
@@ -27,6 +33,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <button onClick={returnCWFunction}>Cloudflare</button>
     </div>
   )
 }
