@@ -9,7 +9,7 @@ function App() {
     fetch('/helloworld')
       .then((response) => {
         console.log(response)
-      }
+      })
   }
 
   return (
