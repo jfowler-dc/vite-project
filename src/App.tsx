@@ -7,8 +7,9 @@ function App() {
 
   function returnCWFunction() {
     fetch('/helloworld')
-      .then((response) => {
-        console.log(response)
+      .then((response) => response.text())
+      .then(res => {
+        console.log(res)
       })
   }
 
